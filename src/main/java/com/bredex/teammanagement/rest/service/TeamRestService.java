@@ -1,9 +1,9 @@
-package com.bredex.teammanagement.domain.service;
+package com.bredex.teammanagement.rest.service;
 
-import com.bredex.teammanagement.domain.dto.TeamRestDto;
-import com.bredex.teammanagement.domain.mapper.TeamDomainMapper;
-import com.bredex.teammanagement.persistence.dto.TeamDomainDto;
-import com.bredex.teammanagement.persistence.service.TeamPersistenceService;
+import com.bredex.teammanagement.rest.dto.TeamRestDto;
+import com.bredex.teammanagement.rest.mapper.TeamRestMapper;
+import com.bredex.teammanagement.domain.dto.TeamDomainDto;
+import com.bredex.teammanagement.domain.service.TeamDomainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,32 +14,32 @@ import java.util.stream.Collectors;
 public class TeamRestService {
 
     @Autowired
-    TeamPersistenceService teamPersistenceService;
+    TeamDomainService teamDomainService;
 
     @Autowired
-    TeamDomainMapper mapper;
+    TeamRestMapper mapper;
     public List<TeamRestDto> getTeamList() {
-        List<TeamDomainDto> domainDto = teamPersistenceService.getTeams();
+        List<TeamDomainDto> domainDto = teamDomainService.getTeams();
         return domainDto.stream().map(domain -> mapper.domainToRest(domain)).collect(Collectors.toList());
     }
 
     public TeamRestDto findTeamById(Long id) {
-        TeamDomainDto domainDto = teamPersistenceService.findTeam(id);
+        TeamDomainDto domainDto = teamDomainService.findTeam(id);
         return mapper.domainToRest(domainDto);
     }
 
     public void addNewTeam(TeamRestDto teamRestDto) {
         TeamDomainDto domainDto = mapper.restToDomain(teamRestDto);
-        teamPersistenceService.saveTeam(domainDto);
+        teamDomainService.saveTeam(domainDto);
     }
 
     public void modifyTeam(TeamRestDto teamRestDto, Long id) {
         TeamDomainDto domainDto = mapper.restToDomain(teamRestDto);
-        teamPersistenceService.updateTeam(domainDto, id);
+        teamDomainService.updateTeam(domainDto, id);
     }
 
     public void deleteTeam(TeamRestDto teamRestDto) {
         TeamDomainDto domainDto = mapper.restToDomain(teamRestDto);
-        teamPersistenceService.removeTeam(domainDto);
+        teamDomainService.removeTeam(domainDto);
     }
 }

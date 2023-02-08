@@ -1,6 +1,6 @@
-package com.bredex.teammanagement.domain.security;
+package com.bredex.teammanagement.rest.security;
 
-import com.bredex.teammanagement.domain.security.service.JwtService;
+import com.bredex.teammanagement.rest.security.service.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;

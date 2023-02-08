@@ -1,12 +1,12 @@
 package com.bredex.teammanagement.domain.mapper;
 
-import com.bredex.teammanagement.domain.dto.TeamRestDto;
-import com.bredex.teammanagement.persistence.dto.TeamDomainDto;
+import com.bredex.teammanagement.domain.dto.TeamDomainDto;
+import com.bredex.teammanagement.domain.entity.Team;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface TeamDomainMapper {
-    TeamRestDto domainToRest(TeamDomainDto domainDto);
+    TeamDomainDto entityToDto(Team team);
 
-    TeamDomainDto restToDomain(TeamRestDto restDto);
+    Team dtoToEntity(TeamDomainDto teamDomainDto);
 }

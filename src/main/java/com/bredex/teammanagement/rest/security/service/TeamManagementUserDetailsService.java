@@ -1,7 +1,7 @@
-package com.bredex.teammanagement.domain.security.service;
+package com.bredex.teammanagement.rest.security.service;
 
-import com.bredex.teammanagement.domain.security.entity.TeamManagementUser;
-import com.bredex.teammanagement.domain.security.repository.UserRepository;
+import com.bredex.teammanagement.rest.security.entity.TeamManagementUser;
+import com.bredex.teammanagement.rest.security.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;

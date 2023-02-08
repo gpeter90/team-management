@@ -1,4 +1,4 @@
-package com.bredex.teammanagement.domain.dto;
+package com.bredex.teammanagement.rest.dto;
 
 public class TeamRestDto {
 

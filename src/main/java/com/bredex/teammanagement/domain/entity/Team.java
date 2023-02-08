@@ -1,4 +1,4 @@
-package com.bredex.teammanagement.persistence.entity;
+package com.bredex.teammanagement.domain.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

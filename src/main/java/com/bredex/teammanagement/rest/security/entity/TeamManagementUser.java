@@ -1,4 +1,4 @@
-package com.bredex.teammanagement.domain.security.entity;
+package com.bredex.teammanagement.rest.security.entity;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;

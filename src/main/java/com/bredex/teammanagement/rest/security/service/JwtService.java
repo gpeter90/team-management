@@ -1,4 +1,4 @@
-package com.bredex.teammanagement.domain.security.service;
+package com.bredex.teammanagement.rest.security.service;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

@@ -1,4 +1,4 @@
-package com.bredex.teammanagement.persistence.dto;
+package com.bredex.teammanagement.domain.dto;
 
 public class TeamDomainDto {
 

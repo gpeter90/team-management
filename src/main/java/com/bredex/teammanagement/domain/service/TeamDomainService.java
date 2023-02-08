@@ -1,10 +1,10 @@
-package com.bredex.teammanagement.persistence.service;
+package com.bredex.teammanagement.domain.service;
 
-import com.bredex.teammanagement.persistence.dto.TeamDomainDto;
-import com.bredex.teammanagement.persistence.entity.Team;
-import com.bredex.teammanagement.persistence.exception.NoTeamFoundException;
-import com.bredex.teammanagement.persistence.mapper.TeamMapper;
-import com.bredex.teammanagement.persistence.repository.TeamRepository;
+import com.bredex.teammanagement.domain.dto.TeamDomainDto;
+import com.bredex.teammanagement.domain.entity.Team;
+import com.bredex.teammanagement.domain.exception.NoTeamFoundException;
+import com.bredex.teammanagement.domain.mapper.TeamDomainMapper;
+import com.bredex.teammanagement.domain.repository.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,13 +14,13 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class TeamPersistenceService {
+public class TeamDomainService {
 
     @Autowired
     private TeamRepository teamRepository;
 
     @Autowired
-    private TeamMapper mapper;
+    private TeamDomainMapper mapper;
 
     public List<TeamDomainDto> getTeams() {
         List<Team> teams = teamRepository.findAll();

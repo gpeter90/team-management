@@ -1,6 +1,6 @@
-package com.bredex.teammanagement.persistence.repository;
+package com.bredex.teammanagement.domain.repository;
 
-import com.bredex.teammanagement.persistence.entity.Team;
+import com.bredex.teammanagement.domain.entity.Team;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

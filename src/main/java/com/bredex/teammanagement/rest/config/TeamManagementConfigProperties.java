@@ -1,4 +1,4 @@
-package com.bredex.teammanagement.domain.config;
+package com.bredex.teammanagement.rest.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

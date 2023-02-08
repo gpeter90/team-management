@@ -1,6 +1,6 @@
-package com.bredex.teammanagement.domain.config;
+package com.bredex.teammanagement.rest.config;
 
-import com.bredex.teammanagement.domain.security.JwtAuthFilter;
+import com.bredex.teammanagement.rest.security.JwtAuthFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

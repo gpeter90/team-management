@@ -1,8 +1,8 @@
-package com.bredex.teammanagement.domain.controller;
+package com.bredex.teammanagement.rest.controller;
 
-import com.bredex.teammanagement.domain.dto.TeamRestDto;
-import com.bredex.teammanagement.domain.service.TeamRestService;
-import com.bredex.teammanagement.persistence.exception.NoTeamFoundException;
+import com.bredex.teammanagement.rest.dto.TeamRestDto;
+import com.bredex.teammanagement.rest.service.TeamRestService;
+import com.bredex.teammanagement.domain.exception.NoTeamFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.lang.NonNull;
