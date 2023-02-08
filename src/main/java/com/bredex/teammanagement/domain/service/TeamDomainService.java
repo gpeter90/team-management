@@ -60,7 +60,7 @@ public class TeamDomainService {
     @Transactional
     public void removeTeam(TeamDomainDto domainDto) {
         Team team = mapper.dtoToEntity(domainDto);
-        Optional<Team> teamFound = teamRepository.findByName(team.getName());
+        Optional<Team> teamFound = teamRepository.findById(team.getId());
 
         if (teamFound.isPresent()) {
             teamRepository.delete(team);
